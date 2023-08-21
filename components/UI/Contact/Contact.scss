@@ -1,0 +1,128 @@
+@mixin contact($background,$color){
+    input{
+        padding: 3px 10px;
+        margin: 0.5rem 0 1rem 0;
+        color: $color;
+        font-family: 'Poppins-ExtraLight';
+        font-size: 15px;
+        background: transparent;
+        outline: none;
+        border-width: 0 0 1px 0;
+        border-color: $color;
+        width: 100%  
+    }
+    .input-title{
+        color: $color;
+    }
+    .contact-maindiv{
+        width: 100%;
+        background: $background;
+        @include flex(none,space-around,none);
+        flex-wrap: wrap;
+        padding: 9rem 3rem; 
+        .leftside{
+            margin: 0 0 2rem 7rem;
+            width: 25em;
+            .content-title{
+                width: 8.8em;
+                color: $color;
+                margin-bottom: 2rem;
+            }
+            p{
+                color: $color;
+            }
+            .title-description{
+                line-height: 1.6rem;
+                margin-bottom: 2rem;
+            }
+
+            span{
+                font-family: 'Poppins-ExtraLight';
+                font-size: 15px;
+                font-weight: bold;
+                color: $color;
+            }
+            
+            .address-info{
+                line-height: 3rem;
+            }
+        }
+        .rightside{
+            width: 40em;
+            .contact-form{
+                width: 75%;
+                padding-right: 1rem;
+                margin: 0 auto;
+                 .grid-2{
+                    @include grid(repeat(2, 1fr),10px);     
+                 }
+                 .textfield{
+                    width: 100%;
+                    height: 8rem;
+                    margin-top: 1rem;
+                    background: transparent;
+                    border-width: 0 0 1px 0;
+                    border-color: $color;
+                    color: $color;
+                    outline: none;
+                    resize: none;
+                    font-size: 15px;
+                    font-family: 'Poppins-ExtraLight';
+                 }
+                 button{
+                    margin-top: 2rem;
+                    width: 100%;
+                    padding: 1rem;
+                    transition: 0.2s;
+                    border: none;
+                    &:hover{
+                        color: $maincolor;
+                    }
+                 }
+            }
+        }
+        
+    }
+}
+.contact{
+    &.homepage{
+        @include contact($greybackground, $white);
+    }
+    &.contactpage{
+        margin-top: 4rem;
+        @include contact(transparent,rgb(30,30,30));
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .contact{
+        &.homepage , &.contactpage{
+            .contact-maindiv{
+                padding: 9rem 0rem; 
+                .leftside{
+                    @include flex(flex-start,center,column);
+                    width: 100%;
+                    margin-left: 0;
+                    padding-left: 5%;
+                    .address-info{
+                        line-height: 1.9rem;
+                        span{
+                            display: none;
+                        }
+                    }
+                }
+                .rightside{
+                
+                   width: 100%;
+                   margin-top: 2rem;
+                   .contact-form{
+                       width: 90%;
+                       .grid-2{
+                            @include flex(none,none,column);
+                       }
+                   }
+                }
+            }
+        }
+    }    
+}

@@ -1,0 +1,23 @@
+.inspects{
+    .section-title{
+        margin-top: 11rem;
+        h2{
+            margin-bottom: 2rem;
+        }
+    }
+    .inspect-container{
+        width: 100%;
+        margin: 3rem 0;
+        @include flex(center,center,none);
+        flex-wrap: wrap;
+        .inspect-content{
+             width: 28rem;
+             height: 28rem;
+             margin: 1rem;
+             img{
+                width: 100%;
+                height: 100%;
+             }
+        }
+    }
+}

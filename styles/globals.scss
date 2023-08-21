@@ -1,0 +1,76 @@
+@import './variables.scss';
+@import './Home.scss';
+@import './Inspect.scss';
+
+@import '../components/Layout/Header/Header.scss';
+@import '../components/Layout/Footer/Footer.scss';
+
+@import '../components/UI/Homepage/Hero/Hero.scss';
+@import '../components/UI/Homepage/Intro/Intro.scss';
+@import '../components/UI/Homepage/ServiceMainpage/ServiceMain.scss';
+@import '../components/UI/Homepage/Testimonial/Testimonial.scss';
+@import '../components/UI/Homepage/Client/Client.scss';
+
+@import '../components/UI/Contact/Contact.scss';
+
+@import '../components/UI/Aboutpage/AboutHero/AboutHero.scss';
+@import '../components/UI/Aboutpage/Process/Process.scss';
+
+@import '../components/UI/Workpage/Work.scss';
+
+@import '../components/UI/Servicepage/Service.scss';
+
+@import '../components/UI/Estimate/Estimate.scss';
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../public/font/Poppins-Regular.ttf');
+}
+@font-face {
+    font-family: 'Poppins-Semibold';
+    src: url('../public/font/Poppins-SemiBold.ttf');
+}
+@font-face {
+    font-family: 'Poppins-ExtraLight';
+    src: url('../public/font/Poppins-ExtraLight.ttf');
+}
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+h2{
+    font-family: 'Poppins-Semibold';
+}
+h1{
+    font-family: 'Poppins-Semibold';
+    font-size: 72px;
+}
+h3{
+    font-family: 'Poppins-Semibold';
+    font-size: 22px;
+}
+h4{
+    font-family: 'Poppins-Semibold';
+    font-size: 28px;
+}
+a{
+    font-family: 'Poppins-ExtraLight';
+    text-decoration: none;
+    font-size: 16px;
+    color: black;
+}
+p{
+    font-family: 'Poppins-ExtraLight';
+    font-size: 15px;
+}
+button{
+    font-family: 'Poppins-ExtraLight';
+    cursor: pointer;
+}
+.map-maindiv{
+    .map{
+        border: none;
+        width: 100%;
+        height: 35rem;
+    }
+}

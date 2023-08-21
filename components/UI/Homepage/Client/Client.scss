@@ -1,0 +1,8 @@
+#client{
+    width: 100%;
+    @include flex(center,center,row);
+    flex-wrap: wrap;
+    .content{
+         margin: 5rem 3rem;
+    }
+}

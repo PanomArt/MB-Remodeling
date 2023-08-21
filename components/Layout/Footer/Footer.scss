@@ -1,0 +1,31 @@
+footer{
+    @include flex(center,space-between,none);
+    flex-wrap: wrap;
+    padding: 5% 15%;
+    .text{
+        @include flex(none,center,none);
+        flex-wrap: wrap;
+        .footer-text{
+            margin-right: 0.1rem;
+            span{
+                text-decoration: underline;
+            }
+            
+        }
+    }
+    
+    .social-media{
+        font-size: 23px;
+        span{
+            margin: 0 0.25rem;
+        }
+    }
+}
+@media screen and (max-width: 760px){
+    footer{
+        @include flex(center,center,column-reverse);
+        .social-media{
+            margin-bottom: 1rem;
+        }
+    }
+}

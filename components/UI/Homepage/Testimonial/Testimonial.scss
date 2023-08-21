@@ -1,0 +1,27 @@
+#testimonial{
+    padding: 7rem 0;
+    .content-title{
+        text-align: center;
+    }
+    
+    .testimonial-container{
+        width: 100%;
+        padding: 0 10%;
+        margin-top: 8rem;
+        @include flex(center,space-evenly,none);
+        flex-wrap: wrap;
+        .testimonial-content{
+            width: 15rem;
+            text-align: center;
+            margin: 0 1.5rem;
+            .comment{
+                margin: 3rem 0 2.1rem 0;
+                line-height: 1.8rem;
+            }
+            .name{
+                color: $maincolor;
+                margin-bottom: 3rem;
+            }
+        }
+    }
+}

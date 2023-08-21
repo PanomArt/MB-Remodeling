@@ -1,0 +1,154 @@
+#hero-section{
+    width: 100%;
+    padding: 0 5%;
+    margin-top: 8em;
+    
+    .main-container{
+         position: relative;
+         width: 100%;
+         height: 50em;
+         background: url('/heroimg01.png');
+         background-position: center;
+         background-attachment: fixed;
+         background-size: cover;
+         background-repeat: no-repeat;
+         z-index: 0;
+
+           &::before{
+               position: absolute;
+               content: '';
+               top: 0;
+               bottom: 0;
+               left: 0;
+               right: 0;
+               background-color: rgba(0,0,0,0.32);
+           }
+
+           &-content{
+                position: absolute;
+                top: 50%;
+                transform: translate(8%, -50%);
+                    .mainhero-title{
+                        color: white;
+                        width: 10em;
+                    }
+                    .mainhero-button{
+                        @include estimatebtn;
+                    }
+
+           }
+    }
+
+    .secondary-container{
+        margin: 4em 0;
+        @include grid(repeat(2,1fr),0);
+        height: 50em;
+        .secondary-image{
+            width: 100%;
+            height: 100%;
+            background: url('/kitchen01.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .secondary-content{
+            width: 70%;
+            margin-left: 4em;
+            @include flex(flex-start,center,column);
+            p{
+                font-size: 15px;
+                margin: 3em 0;
+                width: 80%;
+            }
+            .secondary-btn{
+                background-color: #1E1E1E;
+                color: white;
+                border: none;
+                padding: 0.75em 2.5em;
+            }
+        }
+    }
+}
+@media screen and (max-width : 1200px) {
+    #hero-section{
+        .main-container{
+            height: 40em;
+            &-content{
+                .mainhero-title{
+                    width: 10em;
+                    font-size: 60px;
+                }
+            }
+        }
+        .secondary-container{
+            .secondary-content{
+                h2{
+                    font-size: 30px;
+                }
+                p{
+                    margin: 2rem 0;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width : 960px) {
+    #hero-section{
+        .secondary-container{
+            @include flex(none,center,column-reverse);
+            .secondary-image{
+                background-size: cover;
+                background-position: center;
+            }
+            .secondary-content{
+                margin: 2rem auto;
+                align-items: center;
+                h2{
+                    width: 22rem;
+                    text-align: center;
+                }
+                p{
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width : 720px) {
+    #hero-section{
+        .main-container{
+            height: 35em;
+            &-content{
+                .mainhero-title{
+                    width: 9.5em;
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width : 450px) {
+    #hero-section{
+        padding: 0 ;
+        .main-container{
+            overflow-x: hidden;
+            height: 35em;
+            &-content{
+                .mainhero-title{
+                    width: 10em;
+                    font-size: 30px;
+                }
+            }
+        }
+        .secondary-container{
+            margin-top: 2rem;
+            .secondary-content{
+                h2{
+                    font-size: 25px;
+                }
+                p{
+                    width: 20em;
+                }
+            }
+        }
+    }
+}

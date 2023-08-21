@@ -1,0 +1,128 @@
+header{
+    @include flex(center,space-between,none);
+    padding: 2em 5em;
+    width: 100%;
+    position: fixed;
+    background-color: white;
+    box-shadow: 0px 4.5px 4.5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    transition: 0.5s;
+    .leftside{
+        @include flex(none,none,none);
+        .logo{
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+              path{
+                transform: scale(0.22);
+                fill: #A26028;
+              }
+              &-text{
+                  font-size: 22px;
+                  margin : 8px 0 0 20px;
+                  color: black;
+              }
+        }
+    }
+    .rightside{
+        @include flex(center,none,none);
+        nav{
+            @include flex(none,space-between,none);
+            a{
+                margin: 0 1em;
+                color: black;
+                transition: 0.3s;
+                &:hover{
+                    color: $maincolor;
+                }
+            }
+        }
+        .telephone-number{
+            font-family: 'Poppins-ExtraLight';
+            font-size: 16px;
+            margin-left: 2em;
+        }
+    }
+    .mobile-menus{
+        font-size: 27px;
+        display: none;
+        z-index: 1;
+        cursor: pointer;
+    }
+}
+@media screen and (max-width: 1200px) {
+    header{
+        padding: 1em 2em;
+        @include flex(flex-start,space-between,column);
+        .rightside{
+            .navigator{
+                @include flex(none,space-between,column);
+                top:0;
+                right: 0;
+                width: 20rem;
+                padding: 3rem 0 1rem 0;
+                height: auto;
+                position: absolute;
+                background-color: white;
+                display: none;
+                a{
+                    margin: 1rem auto;
+                    font-family: 'Poppins-Semibold';
+                    font-weight: bolder;
+                }
+                &.active{
+                    display: flex;
+                }
+            }
+            .telephone-number{
+                margin: 0.5rem 0 0 0.5rem;
+            }
+        }
+        .mobile-menus{
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            display: block;   
+        }
+    }
+}
+@media screen and (max-width: 640px) {
+     header{
+        padding: 1em 2em;
+        .rightside{
+            .navigator{
+                @include flex(none,flex-start,column);
+                width: 100%;
+                height: 70vh;
+                display: none;
+                &.active{
+                    display: flex;
+                }
+            }
+            .mobile-menus{
+                font-size: 40px;
+            }
+        }
+     } 
+}
+@media screen and (max-width: 420px) {
+    header{
+        padding: 1em 1em;
+        .leftside{
+            .logo-text{
+                font-size: 18px;
+                margin : 11px 0 0 20px;
+                color: black;
+            }
+        }
+        .rightside{
+            
+        }
+        .mobile-menus{
+            font-size: 25px;
+            z-index: 1;
+            cursor: pointer;
+            right: 0.75rem;
+        }
+    }
+}

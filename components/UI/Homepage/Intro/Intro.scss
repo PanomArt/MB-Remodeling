@@ -1,0 +1,33 @@
+#intro-section{
+    h2{
+        text-align: center;
+    }
+    .intro-container{
+        @include flex(none,space-evenly,none);
+        flex-wrap: wrap;
+        margin: 4em 0;
+        .intro-content{
+            width: 13em;
+            margin: 1em 2em;
+            text-align: center;
+            h3{
+                color: $maincolor;
+                height: 2em;
+            }
+               .intro-des{
+                   margin: 4em 0 2.5em 0;
+               }
+        }
+    }
+}
+@media screen and (max-width: 420px) {
+    #intro-section{
+        .intro-container{
+            .intro-content{
+                h3{
+                    font-size: 21px;
+                }
+            }
+        }
+    }
+}
