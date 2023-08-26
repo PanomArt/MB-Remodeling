@@ -1,10 +1,10 @@
 header{
     @include flex(center,space-between,none);
-    padding: 2em 5em;
+    padding: 1.5em 5em;
     width: 100%;
     position: fixed;
     background-color: white;
-    box-shadow: 0px 4.5px 4.5px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(black,0.2);
     z-index: 10;
     transition: 0.5s;
     .leftside{

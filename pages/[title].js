@@ -33,9 +33,9 @@ export default function Inspect({data}) {
           </div>
           <div className='inspect-container'>
                 {
-                    model.image.map((imagePath) =>(
-                        <div className='inspect-content' loading="lazy">
-                            <img src={imagePath}/>
+                    model.image.map((imagePath, index) =>(
+                        <div className='inspect-content' key={index}>
+                            <img src={imagePath} loading='lazy' alt={`Image ${index}`}/>
                         </div>
                     ))
                 } 
